@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:eight_coin/dashboard.dart';
+import 'package:eight_coin/login.dart';
 import 'package:eight_coin/pallate_color.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +21,7 @@ class _SplasScreeenhState extends State<SplashScreen>  {
     Navigator.pushReplacement(
       context,
      MaterialPageRoute
-     (builder: (context) => const Dashboard(),
+     (builder: (context) => const LoginScreen(),
      ),);
    });
  }
@@ -35,10 +35,12 @@ class _SplasScreeenhState extends State<SplashScreen>  {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("etherum.png" , height: 150, width: 150,),
-                 const Text('Wellcome in 8-coin', 
+                  const SizedBox(height: 10,),
+                  const Text('Wellcome in 8-coin', 
                          style: TextStyle(
                            fontWeight: FontWeight.bold,
                            fontSize: 30,
+                           color: Color.fromARGB(255, 4, 248, 37)
                          ),
                 ),
             ],
