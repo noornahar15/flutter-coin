@@ -1,3 +1,4 @@
+import 'package:eight_coin/pallate_color.dart';
 import 'package:eight_coin/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,9 +14,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: Pallete.borderColor
       ),
       home: const SplashScreen(),
     );
