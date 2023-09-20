@@ -1,17 +1,34 @@
+
 import 'package:eight_coin/pallate_color.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
 
   @override
-  State<Dashboard> createState() => _DashboardState();
+  State<Dashboard> createState() => DashboardState();
 }
 
-class _DashboardState extends State<Dashboard> {
+class DashboardState extends State<Dashboard> {
+late SharedPreferences logindata;
+  late String email;
+
+@override
+void initState(){
+  super.initState();
+  initial();
+}
+
+void initial() async {
+logindata = await SharedPreferences.getInstance();
+setState(() {
+ // email = logindata.getString('email');
+});
+}
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    
     return const Scaffold(
       backgroundColor: Pallete.backgroundColor,
       body: Center(child:Column(
@@ -22,6 +39,8 @@ class _DashboardState extends State<Dashboard> {
                            fontSize: 30,
                          ),
                 ),
+                // ignore: unnecessary_string_interpolations
+               // Text('$email')  ,   
       ],
       ),
       ),

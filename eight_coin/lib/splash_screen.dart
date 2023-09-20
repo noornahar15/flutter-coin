@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:eight_coin/login.dart';
 import 'package:eight_coin/pallate_color.dart';
 import 'package:flutter/material.dart';
@@ -8,23 +7,22 @@ class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
   @override  
-  State<SplashScreen> createState() => _SplasScreeenhState();
+  State<SplashScreen> createState() => SplasScreeenhState();
 }
 
-class _SplasScreeenhState extends State<SplashScreen>  {
- 
+class SplasScreeenhState extends State<SplashScreen>  {
+
+  static const String keyLogin = "login";
+
  @override
  void initState() {
   super.initState();
 
-  Timer(const Duration(seconds: 2), () {
-    Navigator.pushReplacement(
-      context,
-     MaterialPageRoute
-     (builder: (context) => const LoginScreen(),
-     ),);
+    Timer( Duration(seconds: 3), () {
+      Navigator.pushReplacement(context,
+     MaterialPageRoute(builder: (context) =>  const LoginScreen(),));
    });
- }
+    }
 
   @override
   Widget build(BuildContext context) {

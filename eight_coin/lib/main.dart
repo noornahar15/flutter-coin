@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'MSN 8 Coin',
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: Pallete.borderColor
       ),
