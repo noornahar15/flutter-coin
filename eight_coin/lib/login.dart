@@ -13,8 +13,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class LoginScreenState extends State<LoginScreen> {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final  emailController = TextEditingController();
+  final  passwordController = TextEditingController();
 
   late SharedPreferences logindata;
   late bool newuser;
@@ -182,9 +182,7 @@ void dispose(){
 
   print(newuser);
   if (newuser == false) {
-    // ignore: use_build_context_synchronously
-    Navigator.pushReplacement(
-      context, 
+    Navigator.pushReplacement(context, 
     MaterialPageRoute(builder: (context) => const Dashboard()));
   }
 }
