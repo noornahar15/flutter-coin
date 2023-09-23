@@ -18,7 +18,7 @@ class SplasScreeenhState extends State<SplashScreen>  {
  void initState() {
   super.initState();
 
-    Timer( Duration(seconds: 3), () {
+    Timer( const Duration(seconds: 2), () {
       Navigator.pushReplacement(context,
      MaterialPageRoute(builder: (context) =>  const LoginScreen(),));
    });
@@ -32,7 +32,7 @@ class SplasScreeenhState extends State<SplashScreen>  {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset("etherum.png" , height: 150, width: 150,),
+              Image.asset("img/etherum.png" , height: 150, width: 150,),
                   const SizedBox(height: 10,),
                   const Text('Wellcome in 8-coin', 
                          style: TextStyle(

@@ -1,4 +1,3 @@
-
 import 'package:eight_coin/login.dart';
 import 'package:eight_coin/pallate_color.dart';
 import 'package:flutter/material.dart';

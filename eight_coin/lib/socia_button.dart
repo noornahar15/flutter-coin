@@ -1,5 +1,8 @@
+import 'package:eight_coin/dashboard.dart';
+import 'package:eight_coin/firebase_server.dart';
 import 'package:eight_coin/pallate_color.dart';
 import 'package:flutter/material.dart';
+
 
 class SocialButton extends StatefulWidget {
   final String iconPath;
@@ -14,18 +17,30 @@ class SocialButton extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<SocialButton> createState() => _SocialButtonState();
+  State<SocialButton> createState() => SocialButtonState();
 }
 
-class _SocialButtonState extends State<SocialButton> {
+class SocialButtonState extends State<SocialButton> {
+
+   @override
+ void initState() {
+  super.initState();
+
+ }
+
+
   @override
   Widget build(BuildContext context) {
      final shape = RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(10),
   );
 
-    return TextButton.icon(
-      onPressed: () {},
+    return TextButton.icon(onPressed: () async {
+      await FirebaseServer().signInWithGoogle();
+
+       Navigator.pushReplacement(context,
+       MaterialPageRoute(builder: (context) => Dashboard(),));
+    },
       icon: const Icon(Icons.g_mobiledata, 
       weight: 25,
       color:Pallete.gradient3),

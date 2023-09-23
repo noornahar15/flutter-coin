@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "656474017715",
+    "project_id": "coin-a48f9",
+    "storage_bucket": "coin-a48f9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:656474017715:android:674628e73f5c2bbf8645c6",
+        "android_client_info": {
+          "package_name": "com.example.eight_coin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAL1J1fTAcfkZOVffhqZ6cMiPn8LECyMnQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

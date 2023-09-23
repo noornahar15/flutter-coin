@@ -16,6 +16,7 @@ class LoginScreenState extends State<LoginScreen> {
   final  emailController = TextEditingController();
   final  passwordController = TextEditingController();
 
+
   late SharedPreferences logindata;
   late bool newuser;
 
@@ -24,6 +25,7 @@ class LoginScreenState extends State<LoginScreen> {
   super.initState();
 
    checkAlreadyLoger();
+
  }
 
  @override 
@@ -69,29 +71,26 @@ void dispose(){
                     fontWeight: FontWeight.bold,
                     fontSize: 50,
                   ), ),
-          
-                  const SizedBox(height: 30,),
-                  const SocialButton(iconPath: "etherum.png", 
-                  label: "Countinu to google",
-                   horizontalPadding: 100,),
-          
+
                    const SizedBox(height: 10,),
-          
-                   const SocialButton(iconPath: "etherum.png", 
+
+                  const SocialButton(iconPath: "etherum.png", 
                   label: "Countinu to feacbook",
                    horizontalPadding: 90,),
-                   const SizedBox(height: 10,),
+
                    const Text("or", style: TextStyle(
                     fontSize: 16,
                     color: Pallete.gradient3
-                   ), ),
+                   ),
+                    ),
+
                    const SizedBox(height: 10,),
                    // ignore: sized_box_for_whitespace
                    Container(
                     width: 350,
                     child: TextField(
                       controller: emailController,
-                      decoration: InputDecoration(
+                      decoration:  InputDecoration(
                         labelText: 'email',
                       suffixIcon: FaIcon(FontAwesomeIcons.envelope,),
                       border: OutlineInputBorder(
@@ -105,16 +104,17 @@ void dispose(){
                     child: TextField(
                       controller: passwordController,
                       obscureText: true,
-                      decoration: InputDecoration(labelText: 'password',
+                      decoration:  InputDecoration(
                       suffixIcon: Icon(FontAwesomeIcons.eyeSlash,
                       size: 17,),
+                      labelText: 'password',
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(10)),),
                       ),
                     ),
                    ),
                    const SizedBox(height: 10,),
-                    const Text('reset password',
+                     Text('reset password',
                     style: TextStyle(
                       fontSize: 16,
                       color: Pallete.gradient3,
